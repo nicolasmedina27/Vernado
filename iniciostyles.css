@@ -1,0 +1,299 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    padding-top: 100px; /* Espacio para el navbar */
+    background-color: #f0f0f0;
+}
+
+/* Estilos del navbar */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; /* Aumenta la distancia entre el logo y los enlaces */
+}
+
+.logo-img {
+    width: 190px; /* Aumenta el tamaño del logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Aumenta la distancia entre los enlaces */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #E6E7E5;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #d3d3d3;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+.hero-section {
+    background-image: url('/img/backinicio.webp'); /* Cambia la ruta a la imagen del bosque */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Ajusta según prefieras la altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra sutil */
+}
+
+.hero-section-h2{
+    color: #ffcc00;
+}
+
+.info-section-h3{
+    color: #000;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra más sutil */
+}
+
+
+.join-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: white;
+    color: #000;
+}
+
+/* Estilos para la sección de información */
+.info-section {
+    background-color: white;
+    padding: 40px 20px; /* Espacio interno */
+    text-align: center; /* Centrar el texto */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.info-section h3 {
+    font-size: 2.8rem; /* Tamaño del título */
+    margin-bottom: 30px; /* Espacio debajo del título */
+}
+
+.info-section p {
+    font-size: 1.2rem; /* Tamaño del texto */
+    margin-bottom: 30px; /* Aumentar el espacio entre párrafos */
+    line-height: 1.6; /* Aumentar la altura de línea para mejor legibilidad */
+}
+
+/* Contenedor para las imágenes */
+.images-container {
+    display: flex; /* Usar flexbox para alinear imágenes */
+    justify-content: center; /* Centrar las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+
+.images-container {
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 20px; /* Espacio entre el texto y las imágenes */
+}
+
+.images-container .image {
+    max-width: 600px;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 19px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra alrededor de la imagen */
+}
+
+.recycling-agenda {
+    background-color: #e9f5e9; /* Color de fondo suave */
+    color: #333; /* Color de texto */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin: 20px 0; /* Margen superior e inferior */
+    text-align: center; /* Centrar texto dentro de la sección */
+}
+
+.content-blocks {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los bloques se muevan a la siguiente línea */
+    justify-content: space-around; /* Espaciado uniforme entre bloques */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.block {
+    background: #fff; /* Color blanco para los bloques */
+    flex: 0 0 65%; /* Aumenta el ancho de los bloques al 35% */
+    height: auto; /* Altura automática */
+    margin: 10px; /* Aumentar el margen entre los bloques */
+    padding: 20px; /* Aumentar el espacio interno en los bloques */
+    border-radius: 10px; /* Esquinas redondeadas de los bloques */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil en los bloques */
+    text-align: left; /* Alinear texto a la izquierda */
+    transition: transform 0.3s; /* Transición suave para el efecto hover */
+}
+
+.block:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+}
+
+.recycling-agenda-h2{
+    margin-bottom: 15px; /* Espacio inferior para el encabezado */
+    font-size: 2.8rem;
+}
+
+/* Elimine el espacio que se generaba entre las dos secciones */
+.info-section {
+    margin-bottom: 0; /* Eliminar margen inferior */
+}
+.recycling-agenda {
+    margin-top: 0; /* Eliminar margen superior */
+    /* Otras propiedades CSS */
+}
+
+.additional-info {
+    display: none; /* Ocultar la información adicional por defecto */
+    margin-top: 10px; /* Espacio superior */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    color: #666; /* Color de texto para información adicional */
+}
+
+/* Estilo para la expansión del bloque */
+.block.active {
+    flex: 0 0 100%; /* Hacer que el bloque activo ocupe todo el ancho */
+    transition: flex 0.3s ease; /* Transición suave */
+}
+
+.block h3 {
+    font-size: 1.8rem; /* Aumentar tamaño del título del bloque */
+}
+
+.block p {
+    font-size: 1.2rem; /* Aumentar tamaño del párrafo en el bloque */
+}
+
+.additional-info {
+    font-size: 1.1rem; /* Aumentar tamaño del texto adicional */
+    display: none; /* Asegúrate de que inicialmente esté oculto */
+}
+
+/* Añade un estilo para el texto al ser mostrado */
+.block.active .additional-info {
+    display: block; /* Mostrar texto adicional cuando el bloque está activo */
+}
+
+.footer {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Color del texto */
+    padding: 20px 0; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+}
+
+.footer-content {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar contenido */
+    padding: 0 15px; /* Espaciado interno en los lados */
+}
+
+.footer-content p {
+    margin: 10px 0; /* Margen para los párrafos */
+}
+
+.social-links {
+    list-style: none; /* Quitar estilo de lista */
+    padding: 0; /* Quitar padding */
+}
+
+.social-links li {
+    display: inline; /* Mostrar elementos en línea */
+    margin: 0 15px; /* Margen entre enlaces */
+}
+
+.social-icon {
+    width: 30px; /* Ancho de las imágenes de los logos */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.social-links a {
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+}
+
+.social-links a:hover {
+    opacity: 0.8; /* Efecto de opacidad al pasar el ratón */
+}
+
+.recycling-agenda {
+    margin-bottom: 0; /* Eliminar margen inferior */
+}
+
+.footer {
+    margin-top: 0; /* Eliminar margen superior */
+    padding: 20px; /* Ajustar el padding si es necesario */
+}
+
+
